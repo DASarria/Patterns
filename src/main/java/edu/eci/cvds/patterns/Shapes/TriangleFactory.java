@@ -4,8 +4,7 @@ import edu.eci.cvds.patterns.shapes.concrete.Triangle;
 
 public class TriangleFactory implements ShapeFactory{
 
-    @Override
-    public Shape create(RegularShapeType type) {
+    public Shape create() {
         return new Triangle();
     }
 
