@@ -32,4 +32,34 @@
                       por ejemplo el plugin de Compile cumple dos goals que son Compile y TestCompile que son usadas por los lifecycle
                       de Compile para compilar (Compile goal) y Test para TestCompile.
   
-                
+  
+### AJUSTAR ALGUNAS CONFIGURACIONES EN EL PROYECTO
+
+Agregamos el compilador de java
+![imagen](assets/Pomproperties.PNG)
+
+### COMPILAR Y EJECUTAR
+
+usando el comando mvn package obtenemos
+![imagen](assets/package.png)
+De esta manera ya esta compilado el proyecto, luego paara ejecutar debemos agregar una libreria llamada Exec Maven Plugin y la agregamos al pom.xml
+![imagen](assets/agregandoLibreria.png)
+ademas debemos decirle a la libreria que clase es la que debe ejecutar cuando demos el comando de ejecucion
+**mvn exec:java**
+
+Ahora en java tenemos el codigo para realizar el saludo personalizado segun parametros
+![imagen](assets/CodigoIncompleto.png)
+![imagen](assets/ejecucionBasica.png)
+![imagen](assets/ResultadoEjecucion.png)
+Asi vemos que si no ponemos argumentos me dara el "Hello World!" esperado, ahora si agregamos argumentos 
+
+![imagen](assets/ejecucionConArgumentos.png)
+![imagen](assets/resultadoEjecucionConArgumentos.png)
+Pero si agrego otro argumento no dara resultado
+![imagen](assets/ejecucionConMasArgumentos.png)
+![imagen](assets/NoejecutaConSegundoArgumentoConCodigoIncompleto.png) 
+Por eso si queremos que pueda recibir muchos mas argumentos y que todo este bien, deberemos cambiar el codigo de App para que sea mucho mas completo asi:
+![imagen](assets/CodigoAppCompleto.png)
+De esta manera no importa cuantos argumentos le demos siempre dara el resultado esperado.
+![imagen](assets/ejecucionConMasArgumentos.png)
+![imagen](assets/resultadoEjecucionConMasArgumentos.png)
